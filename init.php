@@ -22,15 +22,15 @@ class NV_Selective_WPAutoP {
      */
     public static function init() {
         // Enable the built-in toggle-auto-formatting feature
-        add_action('add_meta_boxes' , array('NV_Selective_WPAutoP', 'metaBoxInit'));
-        add_action('save_post'      , array('NV_Selective_WPAutoP', 'metaBoxSave'));
+        add_action('add_meta_boxes' , array( __CLASS__, 'metaBoxInit' ));
+        add_action('save_post'      , array( __CLASS__, 'metaBoxSave' ));
 
         //Enable filtering
-        add_filter('the_content'    , array('NV_Selective_WPAutoP', 'postFilter'), -1);
-        add_filter('the_excerpt'    , array('NV_Selective_WPAutoP', 'postFilter'), -1);
+        add_filter('the_content'    , array( __CLASS__, 'postFilter' ), -1);
+        add_filter('the_excerpt'    , array( __CLASS__, 'postFilter' ), -1);
 
         //Enable help text
-        add_action('admin_head', array('NV_Selective_WPAutoP','help') );
+        add_action('admin_head'     , array( __CLASS__,'help') );
     }
 
     /**
