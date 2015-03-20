@@ -1,9 +1,11 @@
 === Selective Autoformatting (wpautop) ===
-Contributors: veraxus
+Contributors: Veraxus
 Tags: tinymce, editor, autoformatting, formatting, wpautop
+Requires PHP: 5.3
 Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 0.1
+Tested up to: 4.2
+Stable tag: 0.2
+GitHub Plugin URI: veraxus/nv-plugins-selective-wpautop
 
 Allows WordPress's built-in auto-formatting "feature" to be disabled on a post-specific, case-by-case basis.
 
